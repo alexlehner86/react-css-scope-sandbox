@@ -1,16 +1,15 @@
 import "./App.css";
+import AppHeader from "./components/AppHeader/AppHeader";
 import BeerItemList from "./components/BeerItemList/BeerItemList";
 import { BEER_LIST } from "./constants/app.constants";
 import { BeerItem } from "./models/beer-item.model";
 
 function App() {
-    const beerItems = BEER_LIST.map(response => new BeerItem(response));
+  const beerItems = BEER_LIST.map((response) => new BeerItem(response));
 
   return (
     <>
-      <header className="App-header">
-        <h1>Beer List 🍻</h1>
-      </header>
+      <AppHeader />
       <main>
         <BeerItemList items={beerItems} />
         <div className="attribution">

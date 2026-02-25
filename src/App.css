@@ -1,36 +1,18 @@
-header.App-header {
-    background-color: var(--light-black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-        color: white;
-        font-size: 2rem;
+@scope (main) to ([data-c-host]) {
+    div.attribution {
+        display: grid;
+        place-content: center;
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 1rem;
+    
+        a[href] {
+            color: rgb(65, 65, 65);
+            font-size: 0.9rem;
+        }
     }
-}
 
-div.App-controls {
-    display: flex;
-    justify-content: center;
-    max-width: min(90rem, 90vw);
-    margin: 0 auto;
-}
-
-.App-loading-message {
-    text-align: center;
-}
-
-div.attribution {
-    display: grid;
-    place-content: center;
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 1rem;
-
-    a[href] {
-        color: rgb(65, 65, 65);
-        font-size: 0.9rem;
+    p {
+        color: var(--primary-color-dark);
     }
 }
